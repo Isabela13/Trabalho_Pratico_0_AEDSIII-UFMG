@@ -1,0 +1,22 @@
+tree: Basico.o Alocatree.o Reconstroi.o ConstroiTree.o Consultas.o
+	gcc  main.c Reconstroi.o Basico.o Alocatree.o  ConstroiTree.o Consultas.o   -o tree.out -Wall  -Wextra  -Werror   -std=c99 -pedantic -O2 -lm
+
+Basico.o: Basico.c
+	gcc  -c Basico.c
+
+Alocatree.o: Alocatree.c
+	gcc  -c Alocatree.c
+
+Consultas.o: Consultas.c
+	gcc  -c Consultas.c
+
+ConstroiTree.o: ConstroiTree.c
+	gcc  -c ConstroiTree.c
+
+
+Reconstroi.o: Reconstroi.c
+	gcc  -c Reconstroi.c
+
+
+clean:  
+	rm *.o
